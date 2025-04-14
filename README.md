@@ -1,1 +1,1 @@
-# agentic_description_and_reporting
+# MSc Thesis: Multimodal Agentic System for Highway Safety Monitoring
