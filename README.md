@@ -39,3 +39,19 @@ cd highway_safety_monitoring
 ## I) Driving Scene Description System
 
 1. Install the Cityscapes dataset [from this link](https://www.cityscapes-dataset.com/downloads/). Choose the download option `leftImg8bit_trainvaltest.zip (11GB)`.
+
+2. To run the system with all models, run the notebook `scene-description-all-models.ipynb`, which can be found under the folder `normal_implementation`.
+
+3. To run the agentic system, use the files under the folder `agentic_implementation/scene_description` in your CrewAI directory.
+
+*Note: The evaluation for this system was conducted manually.*
+
+## II) Automatic Accident Report Generation System
+
+1. Install the Car Crash Dataset (CCD) [from this link](https://www.kaggle.com/datasets/asefjamilajwad/car-crash-dataset-ccd).
+
+2. To run the system with both models, run the notebooks `accident-report-gpt.ipynb` and `accident-report-internvl.ipynb`,  which can be found under the folder `normal_implementation`.
+
+3. To run the agentic system, use the files under the folder `agentic_implementation/accident_report` in your CrewAI directory. You can use the sample scenario images under the folder `sample_imgs` for testing the system.
+
+*Note: The evaluation for this system was also conducted manually.*
