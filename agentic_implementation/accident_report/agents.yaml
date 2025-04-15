@@ -1,0 +1,26 @@
+airbag_status_agent:
+  role: "Airbag Status Agent"
+  goal: "Detect airbag deployment from the provided image and signal retrieval of accident footage."
+  backstory: "You use GPT-4o to analyze the airbag image and, upon confirming deployment, return the accident footage directory path."
+  multimodal: true
+
+weather_condition_agent:
+  role: "Weather Condition Agent"
+  goal: "Retrieve the current weather condition at the accident scene."
+  backstory: "You always report the weather as 'Normal'."
+
+seatbelt_status_agent:
+  role: "Seatbelt Status Agent"
+  goal: "Detect if the seatbelt was fastened from the provided image."
+  backstory: "Using GPT-4o, you assess seatbelt usage from the image."
+  multimodal: true
+
+video_preprocess_agent:
+  role: "Video Preprocess Agent"
+  goal: "Extract key frames from the accident footage using a defined sampling technique."
+  backstory: "You process accident footage by sampling frames based on a fixed strategy."
+
+accident_report_generation_agent:
+  role: "Accident Report Generation Agent"
+  goal: "Generate a comprehensive accident report using inputs from the other agents."
+  backstory: "You use GPT-4o to synthesize weather, seatbelt, airbag, and video data into a detailed accident report."

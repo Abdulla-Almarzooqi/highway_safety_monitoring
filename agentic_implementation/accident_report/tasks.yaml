@@ -1,0 +1,47 @@
+airbag_signal_task:
+  description: >
+    Use GPT-4o to analyze the airbag image at {airbag_image} and confirm that the airbag is deployed.
+    Return the accident footage directory path.
+  expected_output: "A string representing the accident footage directory, which is '/home/abdulla.almarzooqi/Desktop/Thesis/datasets/car-crash-dataset-ccd/CrashBest'"
+  agent: airbag_status_agent
+
+video_preprocess_task:
+  description: >
+    Using the accident footage from {airbag_signal_task} and the provided video ID {accident_video_id},
+    sample frames from the footage using the following technique:
+      - Sample every 5 frames before the accident frame,
+      - Include the accident frame (assumed to be frame 25),
+      - Sample every 2 frames after the accident frame.
+    Return a dictionary (as a string) with keys "frames" (a list of file paths) and "accident_frame" (an integer).
+  expected_output: "A JSON dictionary with 'frames' and 'accident_frame'."
+  agent: video_preprocess_agent
+  context:
+    - airbag_signal_task
+
+weather_condition_task:
+  description: >
+    Retrieve the current weather condition at the accident scene.
+  expected_output: "A string that should be 'Normal'."
+  agent: weather_condition_agent
+
+seatbelt_status_task:
+  description: >
+    Use GPT-4o to analyze the seatbelt image at {seatbelt_image} and detect if the seatbelt was fastened.
+  expected_output: "A statement indicating whether the seatbelt was 'fastened' or 'not fastened'."
+  agent: seatbelt_status_agent
+  multimodal: true
+
+accident_report_task:
+  description: >
+    Generate a comprehensive accident report using the following inputs:
+      - Weather Condition: {weather_condition_task}
+      - Seatbelt Status: {seatbelt_status_task}
+      - Airbag Status: "deployed"
+      - Extracted Frames: {video_preprocess_task}
+    Produce a structured report summarizing the accident.
+  expected_output: "A detailed accident report in plain text."
+  agent: accident_report_generation_agent
+  context:
+    - weather_condition_task
+    - seatbelt_status_task
+    - video_preprocess_task
