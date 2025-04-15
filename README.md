@@ -44,7 +44,7 @@ cd highway_safety_monitoring
 
 3. To run the agentic system, use the files under the folder `agentic_implementation/scene_description` in your CrewAI directory.
 
-*Note: The evaluation for this system was conducted manually.*
+   *Note: The evaluation for this system was conducted manually.*
 
 ## II) Automatic Accident Report Generation System
 
@@ -54,4 +54,4 @@ cd highway_safety_monitoring
 
 3. To run the agentic system, use the files under the folder `agentic_implementation/accident_report` in your CrewAI directory. You can use the sample scenario images under the folder `sample_imgs` for testing the system.
 
-*Note: The evaluation for this system was also conducted manually.*
+   *Note: The evaluation for this system was also conducted manually.*
