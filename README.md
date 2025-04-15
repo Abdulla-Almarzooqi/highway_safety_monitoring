@@ -38,9 +38,9 @@ cd highway_safety_monitoring
 
 ## I) Driving Scene Description System
 
-1. Install the Cityscapes dataset [from this link](https://www.cityscapes-dataset.com/downloads/). Choose the download option `leftImg8bit_trainvaltest.zip (11GB)`.
+1. Download the Cityscapes dataset [from this link](https://www.cityscapes-dataset.com/downloads/). Choose the download option `leftImg8bit_trainvaltest.zip (11GB)`.
 
-2. Install the `yolo11x.pt` model using [this direct link](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x.pt).
+2. Download the `yolo11x.pt` model using [this direct link](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x.pt).
 
 3. To run the system with all models, run the notebook `scene-description-all-models.ipynb`, which can be found under the folder `normal_implementation`.
 
@@ -52,7 +52,7 @@ cd highway_safety_monitoring
 
 ## II) Automatic Accident Report Generation System
 
-1. Install the Car Crash Dataset (CCD) [from this link](https://www.kaggle.com/datasets/asefjamilajwad/car-crash-dataset-ccd).
+1. Download the Car Crash Dataset (CCD) [from this link](https://www.kaggle.com/datasets/asefjamilajwad/car-crash-dataset-ccd).
 
 2. To run the system with both models, run the notebooks `accident-report-gpt.ipynb` and `accident-report-internvl.ipynb`,  which can be found under the folder `normal_implementation`.
 
