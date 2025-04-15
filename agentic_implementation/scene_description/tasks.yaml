@@ -1,0 +1,20 @@
+object_detection_task:
+  description: >
+    Run object detection on {exterior_image}. Return a dictionary of important objects and their counts.
+  expected_output: >
+    A JSON dictionary mapping object names to counts
+  agent: object_detection_agent
+
+scene_description_task:
+  description: >
+    Generate a detailed scene description of the driving environment. Mention about the weather, lanes, traffic, and road signs (if any). In your description, pay attention to all objects present in the scene that are of importance to the driver.
+    To assist you in object detection, you will be given a dictionary that represents some of the objects present in the driving scene, where the key represents the object, and the value represents its count.
+    If there are any other objects in the scene which are not in the dictionary you will provided with, you can still talk about them only if they are important to the driver. So, talk only about objects which are of importance to the driver and ignore the others.
+    The detected objects to note are: {object_detection_task}.
+    The image to analyze is provided as a local file path: {exterior_image}.
+
+  expected_output: "A structured scene description in plain text."
+  agent: scene_description_agent
+  output_file: "scene_description.txt"
+  context:
+    - object_detection_task
