@@ -48,6 +48,8 @@ cd highway_safety_monitoring
 
 5. Before executing the code, make sure to adjust the paths accordingly to match your local environment.
 
+6. You can use the sample image found in `sample_imgs/scene_description` to test the system.
+
 *Note: The evaluation for this system was conducted manually.*
 
 ## II) Automatic Accident Report Generation System
@@ -56,8 +58,10 @@ cd highway_safety_monitoring
 
 2. To run the system with both models, run the notebooks `accident-report-gpt.ipynb` and `accident-report-internvl.ipynb`,  which can be found under the folder `normal_implementation`.
 
-3. To run the agentic system, use the files under the folder `agentic_implementation/accident_report` in your CrewAI directory (Note: make sure to name the CrewAI directory `accident_report`). You can use the sample scenario images under the folder `sample_imgs` for testing the system.
+3. To run the agentic system, use the files under the folder `agentic_implementation/accident_report` in your CrewAI directory (Note: make sure to name the CrewAI directory `accident_report`).
 
 4. Similarly, before executing the code, make sure to adjust the paths accordingly to match your local environment.
+
+5. You can also use the sample images found in `sample_imgs/accident_report` to test the system.
 
 *Note: The evaluation for this system was also conducted manually.*
