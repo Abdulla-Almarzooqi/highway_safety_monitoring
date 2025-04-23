@@ -48,7 +48,7 @@ cd highway_safety_monitoring
 
 5. Before executing the code, make sure to adjust the paths accordingly to match your local environment.
 
-6. You can use the sample image found in `sample_imgs/scene_description` to test the system.
+6. You can use the sample image in `sample_imgs/scene_description` to test the system.
 
 *Note: The evaluation for this system was conducted manually.*
 
@@ -62,6 +62,6 @@ cd highway_safety_monitoring
 
 4. Similarly, before executing the code, make sure to adjust the paths accordingly to match your local environment.
 
-5. You can also use the sample images found in `sample_imgs/accident_report` to test the system.
+5. You can also use the sample images in `sample_imgs/accident_report` to test the system.
 
 *Note: The evaluation for this system was also conducted manually.*
